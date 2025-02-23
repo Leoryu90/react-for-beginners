@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <span>Total click: 0</span>
+        <div>
+            <button id="btn">Click me</button>
+        </div>
+        <div>
+            <button id="re">Reset</button>
+        </div>
+    </body>
+
+    <script>
+        let counter = 0;
+
+        const button = document.getElementById("btn");
+        const button2 = document.getElementById("re");
+        const span = document.querySelector("span");
+
+        function handleClick() {
+            counter = counter + 1;
+            span.innerText = `Total click: ${counter}`;
+        }
+
+        function handleClick2() {
+            counter = 0;
+            span.innerText = `Total click: ${counter}`;
+        }
+
+        button.addEventListener("click", handleClick);
+        button2.addEventListener("click", handleClick2);
+    </script>
+</html>
